@@ -5,16 +5,19 @@ body {
   height: 100vh;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 60px;
+  margin: auto;
+  display: block;
 }
 
 .piskvorky {
   width: 350px;
-  display: block;
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
   box-shadow: 10px 10px 30px 0px grey; /*horizontal lenght, vertical lenght, blur radius, spread radius */
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .obrazek {
@@ -27,13 +30,11 @@ body {
   text-align: center;
   line-height: 1.5;
 }
-
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 50px;
   margin: 10px;
 }
-
 .tlacitka {
   list-style-type: none;
   padding: 0;
@@ -41,36 +42,29 @@ h1 {
   text-align: center;
   width: 100%;
 }
-
 li {
   padding: 20px;
 }
-
 a {
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
   width: 100%;
 }
-
 li {
   padding: 20px;
 }
-
 .pravidla {
   background-color: #1fcca4;
   border-bottom: 1px solid #283e50; /*je tohle správné řešení???*/
 }
-
 .pravidla:hover,
 .pravidla:focus {
   background-color: #1cbb96;
 }
-
 .zacithrat {
   background-color: #0197f6;
 }
-
 .zacithrat:hover,
 .zacithrat:focus {
   background-color: #0090e9;
