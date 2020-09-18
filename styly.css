@@ -1,6 +1,7 @@
 body {
   /*background-color: #615dad;*/
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+  background-repeat: no-repeat;
   height: 100vh;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
@@ -9,13 +10,18 @@ body {
 
 .piskvorky {
   width: 350px;
-  background-color: #283e50;
   display: block;
+  background-color: #283e50;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 10px 10px 30px 0px grey; /*horizontal lenght, vertical lenght, blur radius, spread radius */
+  align-items: center;
 }
 
 .obrazek {
   width: 100%;
+  border-radius: 10px 10px 0 0;
 }
+
 .navod {
   padding: 20px;
   text-align: center;
