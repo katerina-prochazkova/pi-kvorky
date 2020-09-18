@@ -1,0 +1,11 @@
+body {
+  /*background-color: #615dad;*/
+  background-image: linear-gradient(to bottom right, #615dad, #ffc8da);
+  height: 100vh;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: #ffffff;
+  font-size: 100px;
+}
