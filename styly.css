@@ -36,20 +36,28 @@ h1 {
   width: 100%;
 }
 
-.pravidla,
-.zacithrat {
+li {
   padding: 20px;
 }
+
 a {
+  display: inline-block;
   text-decoration: none;
   color: #ffffff;
+  width: 100%;
+}
+
+li {
+  padding: 20px;
 }
 
 .pravidla {
   background-color: #1fcca4;
+  border-bottom: 1px solid #283e50; /*je tohle správné řešení???*/
 }
 
-.pravidla:hover {
+.pravidla:hover,
+.pravidla:focus {
   background-color: #1cbb96;
 }
 
@@ -57,6 +65,7 @@ a {
   background-color: #0197f6;
 }
 
-.zacithrat:hover {
+.zacithrat:hover,
+.zacithrat:focus {
   background-color: #0090e9;
 }
