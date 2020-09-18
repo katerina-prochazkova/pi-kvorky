@@ -1,11 +1,62 @@
 body {
   /*background-color: #615dad;*/
-  background-image: linear-gradient(to bottom right, #615dad, #ffc8da);
+  background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   height: 100vh;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 60px;
+}
+
+.piskvorky {
+  width: 350px;
+  background-color: #283e50;
+  display: block;
+}
+
+.obrazek {
+  width: 100%;
+}
+.navod {
+  padding: 20px;
+  text-align: center;
+  line-height: 1.5;
 }
 
 h1 {
   font-family: 'Lobster', cursive;
+  font-size: 50px;
+  margin: 10px;
+}
+
+.tlacitka {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.pravidla,
+.zacithrat {
+  padding: 20px;
+}
+a {
+  text-decoration: none;
   color: #ffffff;
-  font-size: 100px;
+}
+
+.pravidla {
+  background-color: #1fcca4;
+}
+
+.pravidla:hover {
+  background-color: #1cbb96;
+}
+
+.zacithrat {
+  background-color: #0197f6;
+}
+
+.zacithrat:hover {
+  background-color: #0090e9;
 }
