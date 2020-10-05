@@ -79,7 +79,7 @@ a {
   margin-top: 50px;
   margin-bottom: 50px;
   border-radius: 5px 5px 0 0;
-  display: flex;
+  display: flex; /*celkový flex */
   flex-direction: column;
 }
 
@@ -103,26 +103,56 @@ ol li {
   filter: invert(100%);
 }
 .obrazovy-navod {
-  display: flex;
+  display: flex; /*flex obrazové návody*/
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   margin: 0;
 }
 figure {
-  width: 350px;
-  padding: 10px;
+  width: 100%;
+  padding: 10px 0;
   margin: 0;
 }
 
 figcaption {
   font-style: italic;
+  font-size: 16px;
   text-align: center;
-  margin: 0;
-  padding: 0 25px;
+  margin: 10px 25px;
+  padding: 0;
 }
 
 .obrazek {
   width: 300px;
-  margin: 10px 25px;
+  margin: 0 25px;
 }
+
+/*----- TABLET / ŠIROKÁ obrazovka -----*/
+
+@media screen and (min-width: 800px) {
+  .piskvorky-navod {
+    width: 90%;
+  }
+  .obrazovy-navod {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  figure {
+    width: 42%;
+    padding: 0;
+    margin: 40px 20px 0 20px;
+  }
+  figcaption {
+    padding: 0;
+    margin: 0;
+    height: 80px;
+  }
+  .obrazek {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/*----- PC / VELMI ŠIROKÁ obrazovka -----*/
