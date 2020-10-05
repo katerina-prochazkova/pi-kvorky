@@ -97,7 +97,7 @@ ol li {
 .ikona {
   width: 1em;
   height: 1em;
-  filter: ; /* dodělat */
+  filter: invert(100%);
 }
 .obrazovy-navod {
   display: flex;
@@ -105,7 +105,7 @@ ol li {
   align-items: center;
   margin: 0;
 }
-.obrazovy-navod p {
+figcaption {
   font-style: italic;
   text-align: center;
   padding: 5px 5px 10px 5px;
