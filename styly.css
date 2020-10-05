@@ -71,28 +71,31 @@ a {
 
 /*----- STYLOVÁNÍ pravidla.HTML -----*/
 
-/*----- MOBIL / základní = ÚZKÉ nastavení -----*/
-
-/* JAK TAM NASTYLOVAT CCA 50PX ODSAZENÍ SHORA???? */
+/*----- MOBIL / základní / ÚZKÁ obrazovka -----*/
 
 .piskvorky-navod {
   background-color: #283e50;
   width: 350px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   border-radius: 5px 5px 0 0;
   display: flex;
   flex-direction: column;
 }
 
+.pravidla {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 ol {
-  /* padding: 20px; */
-  padding-left: 50px;
-  padding-right: 20px;
-  /* margin: 16px 0; */
+  padding-left: 60px;
+  padding-right: 25px;
   list-style-position: outside;
 }
 
 ol li {
-  padding: 5px;
+  padding: 10px;
 }
 .ikona {
   width: 1em;
@@ -102,17 +105,24 @@ ol li {
 .obrazovy-navod {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
   margin: 0;
 }
+figure {
+  width: 350px;
+  padding: 10px;
+  margin: 0;
+}
+
 figcaption {
   font-style: italic;
   text-align: center;
-  padding: 5px 5px 10px 5px;
-  margin: 0px 20px;
+  margin: 0;
+  padding: 0 25px;
 }
 
 .obrazek {
   width: 300px;
-  padding: 10px 20px;
+  margin: 10px 25px;
 }
