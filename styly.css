@@ -132,7 +132,7 @@ figcaption {
 
 @media screen and (min-width: 800px) {
   .piskvorky-navod {
-    width: 90%;
+    width: 650px;
   }
   .obrazovy-navod {
     flex-direction: row;
@@ -142,7 +142,7 @@ figcaption {
   figure {
     width: 42%;
     padding: 0;
-    margin: 40px 20px 0 20px;
+    margin: 20px 20px 0 20px;
   }
   figcaption {
     padding: 0;
@@ -156,3 +156,5 @@ figcaption {
 }
 
 /*----- PC / VELMI ŠIROKÁ obrazovka -----*/
+/* @media screen and (min-width: 1300px); */
+/* jeví se mi to stejné jako u široké, takže to neměním */
