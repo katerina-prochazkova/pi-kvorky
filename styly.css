@@ -162,13 +162,12 @@ figcaption {
 
 /*----- STYLOVÁNÍ hra.HTML -----*/
 
-
-
 .menu {
   width: 80vmin;
   height: 45px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -189,7 +188,7 @@ h2 {
   width: 25px;
   height: 25px;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 a.home,
@@ -199,10 +198,6 @@ a.restart {
   padding: 0;
   border-radius: 5px;
   text-align: center;
-}
-
-a.home{
- 
 }
 
 
@@ -238,5 +233,6 @@ button {
   padding: 0;
 }
 
-button:hover {
+button:hover,
+button:focus {
   background-color: rgba(255, 255, 255, 0.6);}
