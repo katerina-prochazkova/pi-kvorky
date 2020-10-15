@@ -1,4 +1,5 @@
 /*----- STYLOVÁNÍ index.HTML -----*/
+/* *, :after, :before { box-sizing: border-box; } */
 
 body {
   background-image: linear-gradient(#615dad, #ffc8da)
@@ -158,3 +159,84 @@ figcaption {
 /*----- PC / VELMI ŠIROKÁ obrazovka -----*/
 /* @media screen and (min-width: 1300px); */
 /* jeví se mi to stejné jako u široké, takže to neměním */
+
+/*----- STYLOVÁNÍ hra.HTML -----*/
+
+
+
+.menu {
+  width: 80vmin;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  text-align: center;
+}
+h2 {
+  margin: 0;
+  display: inline;
+  margin: 0 10px;
+}
+.player {
+  display: inline-block;
+  filter: invert(100%);
+}
+.hraje {
+  display: flex;
+  align-content: center;
+}
+.ikona-hra{
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+a.home,
+a.restart {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+a.home{
+ 
+}
+
+
+.home {
+  background-color: #1fcca4;
+}
+.home:hover,
+.home:focus {
+  background-color: #1cbb96;
+}
+.restart {
+  background-color: #0197f6;
+}
+.restart:hover,
+.restart:focus {
+  background-color: #0090e9;
+}
+
+.playground{
+  max-width: 80vmin;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgba(0, 0, 0, 0.548);
+  background-image: linear-gradient(#9693ca, #f5d7e1)
+  background-repeat: no-repeat;
+
+}
+button {
+  width: calc(80vmin / 10);
+  height: calc(80vmin / 10);
+  border: 1px solid rgba(0, 0, 0, 0.548);
+  background-color: rgba(255, 255, 255, 0.3);  margin: 0;
+  padding: 0;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.6);}
