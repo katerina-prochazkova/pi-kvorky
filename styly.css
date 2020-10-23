@@ -169,7 +169,6 @@ figcaption {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  text-align: center;
 }
 h2 {
   margin: 0;
@@ -199,7 +198,6 @@ a.restart {
   border-radius: 5px;
   text-align: center;
 }
-
 
 .home {
   background-color: #1fcca4;
@@ -236,3 +234,23 @@ button {
 button:hover,
 button:focus {
   background-color: rgba(255, 255, 255, 0.6);}
+
+
+  /*----- STYLOVÁNÍ hra.HTML JAVA SKRIPT-----*/
+.played-circle{
+  background-image: url("images/circle.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* transform: ; */
+}
+.played-circle:hover,
+.played-circle:focus{
+  di
+}
+
+.played-cross{
+  background-image: url("images/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* transform: ; */
+}
