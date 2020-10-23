@@ -241,16 +241,10 @@ button:focus {
   background-image: url("images/circle.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  /* transform: ; */
-}
-.played-circle:hover,
-.played-circle:focus{
-  di
 }
 
 .played-cross{
   background-image: url("images/cross.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  /* transform: ; */
 }

@@ -2,23 +2,26 @@
 console.log('funguje to');
 
 let praveHraje = 'circle';
+const tlacitka = document.querySelectorAll('.button');
 
-document.querySelector('.button').addEventListener('click', function () {
-  if ((praveHraje = 'circle')) {
-    console.log('jede if circle');
-    document.querySelector('.button').classList.add('played-circle');
-    document.querySelector('.button').classList.remove('button');
-    document.querySelector('.player').src = 'images/cross.svg';
-    praveHraje = 'cross';
-    console.log(praveHraje);
-  }
-  // praveHraje = 'cross';
-  // console.log(praveHraje);
-  else if ((praveHraje = 'cross')) {
-    console.log('jede if cross');
-    document.querySelector('.button').classList.add('played-cross');
-    document.querySelector('.player').src = 'images/circle.svg';
-  }
-  praveHraje = 'circle';
-  console.log(praveHraje);
-});
+for (let i = 0; i < tlacitka.length; i++) {
+  tlacitka[i].addEventListener('click', () => {
+    if (
+      tlacitka[i].classList.contains('played-circle') ||
+      tlacitka[i].classList.contains('played-cross')
+    ) {
+      return;
+    }
+    if (praveHraje === 'circle') {
+      tlacitka[i].classList.add('played-circle');
+      document.querySelector('.player').src = 'images/cross.svg';
+      praveHraje = 'cross';
+      // console.log('právě hraje ' + praveHraje);
+    } else if (praveHraje === 'cross') {
+      tlacitka[i].classList.add('played-cross');
+      document.querySelector('.player').src = 'images/circle.svg';
+      praveHraje = 'circle';
+      // console.log('právě hraje ' + praveHraje);
+    }
+  });
+}
