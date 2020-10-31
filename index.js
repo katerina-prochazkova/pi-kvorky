@@ -25,18 +25,9 @@ for (let i = 0; i < hraciPole.length; i++) {
       praveHraje = 'circle';
       console.log('právě hraje ' + praveHraje);
     }
-    console.log(
-      'Get position',
-      getPosition(event.target),
-    ); /* tak tady teda nevím, co ten event*/
-    console.log(
-      'Get symbol',
-      getSymbol(event.target),
-    ); /* tak tady teda nevím, co ten event*/
-    console.log(
-      'Winning',
-      isWinningMove(event.target),
-    ); /* tak tady teda nevím, co ten event*/
+    console.log('Get position', getPosition(event.target));
+    console.log('Get symbol', getSymbol(event.target));
+    console.log('Winning', isWinningMove(event.target));
   });
 }
 
@@ -59,19 +50,15 @@ const getPosition = (pole) => {
     column: poleIndex % velikostPole,
   };
 };
-// /* bod číslo 3.ii */
 const getField = (row, column) => hraciPole[row * velikostPole + column];
 
 const getSymbol = (pole) => {
-  //název třídy přizpůsob kódu
   if (pole.classList.contains('played-cross')) {
     return 'cross';
   } else if (pole.classList.contains('played-circle')) {
     return 'circle';
   }
 };
-
-// /* bod číslo 4 */
 
 const vyhrava = 5;
 
@@ -136,7 +123,6 @@ const vitezstvi = (pole) => {
       window.confirm(
         'Vítězí kolečko! Gratulujeme! Dáte křížku ještě jednu šanci?',
       );
-      // location.reload();
     } else if (getSymbol(pole) === 'cross') {
       window.confirm(
         'Vítězí křížek! Gratulujeme! Dáte kolečku ještě jednu šanci?',
@@ -145,3 +131,5 @@ const vitezstvi = (pole) => {
     location.reload();
   }
 };
+/* jak to nastavit tak, aby se první vypsal 5. vítězný znak a až potom vyskočilo gratulační pole? */
+/* jak to udělat aby to bralo i diagonály? */
