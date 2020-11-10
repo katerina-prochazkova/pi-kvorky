@@ -241,10 +241,25 @@ button:focus {
   background-image: url("images/circle.svg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: 60%;
+  animation-name: size;
+  animation-duration: 0.5s;
 }
 
 .played-cross{
   background-image: url("images/cross.svg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: 60%;
+  animation-name: size;
+  animation-duration: 0.5s;
 }
+
+/*---- animace X O ----*/
+@keyframes size {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 60%;
+  }

@@ -35,8 +35,6 @@ for (let i = 0; i < hraciPole.length; i++) {
 
 const velikostPole = 10;
 
-// const hraciPole = document.querySelectorAll('.button')
-
 const getPosition = (pole) => {
   let poleIndex = 0;
   while (poleIndex < hraciPole.length) {
@@ -93,14 +91,14 @@ const isWinningMove = (pole) => {
 
   let veSloupci = 1; // Jednička pro právě vybrané políčko
 
-  //Koukni nahoru
+  // Koukni nahoru
   i = origin.row;
   while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
     veSloupci++;
     i--;
   }
 
-  // 	// Koukni dolu
+  // Koukni dolu
   i = origin.row;
   while (
     i < velikostPole - 1 &&
@@ -113,6 +111,80 @@ const isWinningMove = (pole) => {
   if (veSloupci >= vyhrava) {
     return true;
   }
+
+  //koukni doprava nahoru (Left Bottom to Right Top)
+
+  let diagonalaLBRT = 1;
+  let j = origin.row;
+  let k = origin.column;
+
+  while (
+    j < velikostPole - 1 &&
+    k < velikostPole - 1 &&
+    symbol === getSymbol(getField(j - 1, k + 1))
+  ) {
+    diagonalaLBRT++;
+    j--;
+    k++;
+    console.log('koukám doprava nahoru');
+  }
+
+  // koukni doleva dolů (Right Top to Left Bottom )
+  j = origin.row;
+  k = origin.column;
+
+  while (
+    j < velikostPole - 1 &&
+    k < velikostPole - 1 &&
+    symbol === getSymbol(getField(j + 1, k - 1))
+  ) {
+    diagonalaLBRT++;
+    j++;
+    k--;
+    console.log('koukám doleva dolů');
+  }
+
+  if (diagonalaLBRT >= vyhrava) {
+    return true;
+  }
+
+  // koukni doleva nahoru (Right Bottom to Left Top)
+
+  let diagonalaRBLT = 1;
+  j = origin.row;
+  k = origin.column;
+
+  while (
+    j < velikostPole - 1 &&
+    k < velikostPole - 1 &&
+    symbol === getSymbol(getField(j - 1, k - 1))
+  ) {
+    diagonalaRBLT++;
+    j--;
+    k--;
+    console.log('koukám doleva nahoru');
+  }
+
+  // koukni doprava dolů (Left Top to Right Bottom )
+  j = origin.row;
+  k = origin.column;
+
+  while (
+    j < velikostPole - 1 &&
+    k < velikostPole - 1 &&
+    symbol === getSymbol(getField(j + 1, k + 1))
+  ) {
+    diagonalaRBLT++;
+    j++;
+    k++;
+    console.log('koukám doprava dolů');
+  }
+
+  if (diagonalaRBLT >= vyhrava) {
+    return true;
+  }
+
+  /* -------konec diagonály -------*/
 
   return false;
 };
@@ -131,5 +203,5 @@ const vitezstvi = (pole) => {
     location.reload();
   }
 };
+
 /* jak to nastavit tak, aby se první vypsal 5. vítězný znak a až potom vyskočilo gratulační pole? */
-/* jak to udělat aby to bralo i diagonály? */
